@@ -16,7 +16,7 @@ associated within the receipt and the total items purchased and money spent on t
 associated with it. It also contains bonus points, points earned and their corresponding reasons.
 
 **First: Review Existing Unstructured Data and Diagram a New Structured Relational Data Model**
-I used MySQL Workbench to draw the ER Diagram.
+I used MySQL Workbench to draw the ER Diagram. The Given ERD is in 2NF (Second normalised form) which is one of the best practises used in designing an ERD.
 - Each user may have different receipts. So one user id in Users table will have multiple receipt ids in receipts table. So, I mapped **"One to many"**  relationship between Users and Receipts table.
 - Since receipts table had a column which has multiple values and it shows that the receipts table is not in **1Nf (First normalisation)**,I divided the receipts table into Receipt_Items which has data related to Receipt Items. Since one receipt may have many items in it, I mapped **"One to many"** relationship between Receipts and Receipt_Items table.
 - Each brand can be available in many receipts, so I mapped **"One to many"** relationship between brands and Receipt_Items table.
